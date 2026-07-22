@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   ChevronDown, 
@@ -23,7 +24,30 @@ import imageOne from "./1.jpg";
 import imageThree from "./3.jpg";
 import sgsGlowingCracks from "./13.jpg";
 
-export default function App() {
+function NotFoundPage() {
+  return (
+    <div className="min-h-screen bg-[#060c18] text-white flex flex-col items-center justify-center p-6 text-center">
+      <div className="max-w-md mx-auto flex flex-col items-center">
+        <h1 className="font-serif text-7xl font-light text-white mb-4 tracking-wider">404</h1>
+        <h2 className="font-sans text-xl text-white/90 mb-3 font-medium">
+          Strona nie została znaleziona
+        </h2>
+        <p className="font-sans text-sm text-white/60 mb-8 leading-relaxed">
+          Strona, której szukasz, nie istnieje lub została przeniesiona pod inny adres.
+        </p>
+        <Link 
+          to="/selfguidancespace" 
+          replace 
+          className="btn btn--primary"
+        >
+          Przejdź do Self-Guidance Space
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function SelfGuidanceSpace() {
   const prismRef = useRef<HTMLDivElement>(null);
   const stickyCtaRef = useRef<HTMLDivElement>(null);
   const [isJoined, setIsJoined] = useState(false);
@@ -449,5 +473,15 @@ export default function App() {
       </div>
 
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Navigate to="/selfguidancespace" replace />} />
+      <Route path="/selfguidancespace" element={<SelfGuidanceSpace />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
