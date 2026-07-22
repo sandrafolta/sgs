@@ -29,6 +29,31 @@ export default function App() {
   const [isJoined, setIsJoined] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Always force scroll to top on mount / refresh and disable history scroll restoration
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Clear hash if any exists to prevent browser native jump-to-hash on refresh
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    // Force scroll position to (0,0) immediately
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (reduce.matches) {
