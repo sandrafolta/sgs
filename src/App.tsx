@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Routes, Route, Navigate, Link } from "react-router-dom";
+import { Routes, Route, Navigate, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   ChevronDown, 
@@ -23,6 +23,28 @@ import SelfInquiry from "./components/SelfInquiry";
 import imageOne from "./1.jpg";
 import imageThree from "./3.jpg";
 import sgsGlowingCracks from "./13.jpg";
+
+function IndexLoader() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/selfguidancespace", { replace: true });
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
+  return (
+    <div className="min-h-screen bg-[#060c18] text-white flex flex-col items-center justify-center p-6 text-center">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin mb-2" />
+        <p className="font-serif text-lg tracking-widest text-white/90 font-light uppercase">
+          Ładuję...
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function NotFoundPage() {
   return (
@@ -479,7 +501,7 @@ function SelfGuidanceSpace() {
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/selfguidancespace" replace />} />
+      <Route path="/" element={<IndexLoader />} />
       <Route path="/selfguidancespace" element={<SelfGuidanceSpace />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
