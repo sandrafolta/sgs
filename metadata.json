@@ -1,0 +1,6 @@
+{
+  "name": "Self-Guidance Space",
+  "description": "An immersive, editorial digital exhibition and premium interactive landing page for Self-Guidance Space, centered on self-authority and perspective shift.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
