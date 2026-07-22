@@ -76,30 +76,58 @@ function SelfGuidanceSpace() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isReady, setIsReady] = useState(false);
 
-  // Always force scroll to top on mount / refresh and disable history scroll restoration
+  // Handle navigation, reload hash clearing, and anchor scrolling with header offset
   useEffect(() => {
     setIsReady(true);
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
 
-    // Clear hash if any exists to prevent browser native jump-to-hash on refresh
-    if (window.location.hash) {
-      window.history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
+    const nav = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const isReload = nav?.type === 'reload';
 
-    // Force scroll position to (0,0) immediately
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+    if (isReload) {
+      // Clear hash on reload
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
 
-    const timer = setTimeout(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
-    }, 50);
 
-    return () => clearTimeout(timer);
+      const timer = setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 50);
+
+      return () => clearTimeout(timer);
+    } else if (window.location.hash) {
+      // Direct external navigation with hash: do NOT clear hash, scroll to target element with 6rem offset
+      const targetId = decodeURIComponent(window.location.hash.substring(1));
+      const scrollToHashElement = () => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          const headerOffset = 96; // 6rem (h-24 = 96px)
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          window.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: 'smooth'
+          });
+        }
+      };
+
+      scrollToHashElement();
+      const timer = setTimeout(scrollToHashElement, 100);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
   }, []);
 
   useEffect(() => {
@@ -183,12 +211,19 @@ function SelfGuidanceSpace() {
     };
   }, []);
 
-  // Smooth scroll handler to targeted chapter ID
+  // Smooth scroll handler to targeted chapter ID with 6rem fixed header offset
   const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 96; // 6rem (h-24 = 96px)
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: "smooth"
+      });
     }
   };
 
