@@ -28,9 +28,11 @@ export default function App() {
   const stickyCtaRef = useRef<HTMLDivElement>(null);
   const [isJoined, setIsJoined] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   // Always force scroll to top on mount / refresh and disable history scroll restoration
   useEffect(() => {
+    setIsReady(true);
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
@@ -245,7 +247,7 @@ export default function App() {
         <section className="hero sec--dark w-full flex flex-col items-center" id="start">
           <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
             <div className="hero__media w-full max-w-[28rem] mx-auto">
-              <div className={`prism ${isJoined ? 'is-joined' : ''}`} id="prism" ref={prismRef}>
+              <div className={`prism ${isJoined ? 'is-joined' : ''} ${isReady ? 'prism-ready' : ''}`} id="prism" ref={prismRef}>
                 <span className="shard s1"></span><span className="shard s2"></span>
                 <span className="shard s3"></span><span className="shard s4"></span>
               </div>

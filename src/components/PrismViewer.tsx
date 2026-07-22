@@ -125,6 +125,12 @@ export default function PrismViewer({ isPl }: PrismViewerProps) {
                     style={{
                       clipPath: shard.clip,
                     }}
+                    initial={{
+                      x: shard.shiftX,
+                      y: shard.shiftY,
+                      rotate: shard.rotate,
+                      scale: 1.03,
+                    }}
                     animate={{
                       x: tx,
                       y: ty,

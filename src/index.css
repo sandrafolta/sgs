@@ -247,7 +247,8 @@ strong{font-weight:600;}
 /* pryzmat w hero */
 .prism{position:relative; aspect-ratio:768/1367; overflow:hidden; border-radius:3px;}
 .shard{position:absolute; inset:0;
-  background:url('./5.jpg') center/cover no-repeat;
+  background:url('./5.jpg') center/cover no-repeat;}
+.prism-ready .shard{
   transition:transform .9s cubic-bezier(.22,.61,.36,1);}
 .s1{clip-path:polygon(0 0,52% 0,44% 100%,0 100%);           transform:translate(-4%,-2%) rotate(-1.2deg);}
 .s2{clip-path:polygon(52% 0,100% 0,100% 46%,44% 52%);       transform:translate(5%,-3%)  rotate(1.4deg);}
@@ -256,10 +257,12 @@ strong{font-weight:600;}
 .prism.is-joined .shard{transform:none;}
 .prism::after{
   content:''; position:absolute; inset:0; pointer-events:none; opacity:.5;
-  transition:opacity .9s ease;
   background:linear-gradient(115deg,
     transparent 44%, rgba(143,211,244,.45) 48%,
     rgba(255,214,92,.5) 51%, rgba(232,160,180,.45) 54%, transparent 58%);
+}
+.prism-ready::after{
+  transition:opacity .9s ease;
 }
 .prism.is-joined::after{opacity:0;}
 
