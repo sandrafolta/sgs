@@ -46,38 +46,26 @@ export default function SelfInquiry({ isPl }: SelfInquiryProps) {
           <div className="price-card price-card--featured text-center w-full max-w-[34rem]">
             <p className="price-card__name">Płatność jednorazowa</p>
             <div className="price-card__value flex items-baseline justify-center gap-2 md:gap-3">
-              <span className="line-through text-ink-soft/50 text-base md:text-lg font-normal">3999 zł</span>
-              <span>2999 zł</span>
+              <span>3999 zł</span>
             </div>
             <p className="price-card__bonus">Dostajesz sesję 1:1 ze mną w prezencie</p>
             <a className="btn btn--primary" href="https://platforma.sandrafolta.pl/s/self-guidance-space.html">Dołączam do przestrzeni</a>
-            <p className="price-card__name mt-3.5 !mb-0">
-              Obecna cena rośnie 1.09
-            </p>
           </div>
 
           <div className="price-card text-center w-full max-w-[34rem]">
-            <p className="price-card__name">Płatność w 3 ratach</p>
+            <p className="price-card__name">Płatność w 4 ratach</p>
             <div className="price-card__value flex items-baseline justify-center gap-2 md:gap-3">
-              <span className="line-through text-ink-soft/50 text-base md:text-lg font-normal">4 × 999 zł</span>
-              <span>3 × 999 zł</span>
+              <span>4 × 999 zł</span>
             </div>
             <a className="btn btn--primary" href="https://platforma.sandrafolta.pl/s/self-guidance-space.html">Dołączam do przestrzeni</a>
-            <p className="price-card__name mt-3.5 !mb-0">
-              Obecna cena rośnie 1.09
-            </p>
           </div>
 
           <div className="price-card text-center w-full max-w-[34rem]">
             <p className="price-card__name">Płatność w 6 ratach</p>
             <div className="price-card__value flex items-baseline justify-center gap-2 md:gap-3">
-              <span className="line-through text-ink-soft/50 text-base md:text-lg font-normal">6 × 666 zł</span>
-              <span>6 × 555 zł</span>
+              <span>6 × 666 zł</span>
             </div>
             <a className="btn btn--primary" href="https://platforma.sandrafolta.pl/s/self-guidance-space.html">Dołączam do przestrzeni</a>
-            <p className="price-card__name mt-3.5 !mb-0">
-              Obecna cena rośnie 1.09
-            </p>
           </div>
 
           <p className="pricing__note max-w-[34rem] mx-auto text-center">Dostęp do wszystkich elementów przestrzeni i grupy na Telegramie otrzymujesz od razu po zakupie, na 6 miesięcy od dołączenia. Nie dotyczy mastermindów, kursów certyfikujących i współpracy 1:1.</p>
