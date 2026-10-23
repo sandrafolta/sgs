@@ -49,10 +49,10 @@ function page(status, { error = "", setup = false } = {}) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Mapa samoprowadzenia</title>
-<link rel="icon" type="image/png" href="/icon-pryzmat.png">
-<link rel="apple-touch-icon" href="/icon-pryzmat.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="shortcut icon" href="/icon-pryzmat.png">
+<link rel="icon" type="image/png" href="/icon-pryzmat.png?v=2">
+<link rel="apple-touch-icon" href="/icon-pryzmat.png?v=2">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+<link rel="shortcut icon" href="/icon-pryzmat.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:wght@400;600;700&display=swap">
