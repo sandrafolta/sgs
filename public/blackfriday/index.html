@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Black Friday • Sandra Folta</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0B0B0B}
+a{color:#C8A456}a:hover{color:#E2C67A}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.sgs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.prod{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;box-sizing:border-box;font-family:Raleway,system-ui,sans-serif}
+.btn-gold{background:#C8A456;color:#0B0B0B}.btn-gold:hover{background:#E2C67A;color:#0B0B0B}
+.btn-line{border:1px solid #C8A456;color:#C8A456}.btn-line:hover{background:#1F1A10;color:#E2C67A}
+.list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.list li::marker{color:#C8A456}
+.stage{position:relative;aspect-ratio:4/3;background:#191919;border:1px solid #2B2B2B;border-radius:20px;overflow:hidden}
+.badge{position:absolute;top:16px;left:16px;z-index:5;background:#C8A456;color:#0B0B0B;font:700 13px Raleway,sans-serif;letter-spacing:.04em;padding:6px 12px;border-radius:999px}
+.doc{position:absolute;left:12%;top:13%;width:42%;aspect-ratio:3/4;background:#F7F5F0;border-radius:6px;box-shadow:0 24px 48px rgba(0,0,0,.6);transform:rotate(-6deg);padding:9% 6%;box-sizing:border-box;display:flex;flex-direction:column;gap:7px}
+.doc-k{font:700 9px Raleway,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#C8A456}
+.doc-t{font:700 17px/1.15 "Playfair Display",serif;color:#0B0B0B}
+.bar{height:5px;border-radius:3px;background:#D9D4C8}
+.phone{position:absolute;right:12%;bottom:9%;width:23%;aspect-ratio:9/18;background:#0B0B0B;border:3px solid #3A3A3A;border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:10px;box-sizing:border-box;z-index:3}
+.play{width:44px;height:44px;border-radius:50%;background:#C8A456;display:flex;align-items:center;justify-content:center}
+.wave{display:flex;gap:3px;align-items:center;height:28px}
+.wave span{width:3px;background:#C8A456;border-radius:2px;display:block}
+.ph-t{font:600 9px Raleway,sans-serif;color:#EDEBE6;text-align:center;letter-spacing:.06em;text-transform:uppercase}
+.laptop{position:absolute;left:11%;right:11%;top:13%;z-index:2}
+.screen{aspect-ratio:16/10;background:#0B0B0B;border:8px solid #2E2E2E;border-radius:10px;overflow:hidden;position:relative;box-sizing:border-box}
+.base{height:10px;background:#3A3A3A;border-radius:0 0 10px 10px;margin:0 -7%}
+.shot{position:absolute;inset:0;background:#3C3C3C;display:flex;align-items:flex-end;padding:14px;box-sizing:border-box}
+.shot-l{font:500 10px Raleway,sans-serif;color:#CFCBC2}
+.scr-t{position:absolute;left:14px;top:14px;right:14px;font:700 18px/1.15 "Playfair Display",serif;color:#F4F1EA}
+.scr-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.tablet{position:absolute;right:11%;top:10%;width:46%;aspect-ratio:3/4;background:#0B0B0B;border:6px solid #333;border-radius:18px;padding:12px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;z-index:3;box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.row{display:flex;align-items:center;gap:8px;background:#1F1F1F;border-radius:6px;padding:5px 8px;color:#EDEBE6;font:500 10px Raleway,sans-serif}
+.num{color:#C8A456;font-weight:700}
+.cal{position:absolute;left:9%;top:16%;width:58%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.day{aspect-ratio:1;background:#F7F5F0;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:0 10px 20px rgba(0,0,0,.45)}
+.day b{font:700 20px "Playfair Display",serif;color:#0B0B0B}
+.day i{font:600 8px Raleway,sans-serif;font-style:normal;letter-spacing:.1em;color:#C8A456;text-transform:uppercase}
+.mods{position:absolute;inset:0;padding:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;box-sizing:border-box;align-content:end}
+.mod{background:#1F1F1F;border:1px solid #3A3A3A;border-radius:6px;padding:6px;font:600 9px Raleway,sans-serif;color:#EDEBE6}
+.mod span{display:block;color:#C8A456;font-weight:700;margin-bottom:2px}
+.photo{background:#2A2A2A;border:1px dashed #5A5A5A;border-radius:20px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box;color:#BDB8AE;font:500 14px Raleway,sans-serif}
+.quote{background:#FFFFFF;border:1px solid #E4DFD3;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:20px;box-sizing:border-box}
+@media (max-width:900px){
+.hero,.g2,.g3,.sgs,.prod,.cols2{grid-template-columns:minmax(0,1fr)}
+.wrap{padding:0 20px}
+}
+</style>
+
+</head>
+<body>
+
+<div style="width: 100%; background: #0B0B0B; color: #EDEBE6; font-family: Raleway, system-ui, sans-serif; font-size: 16px; line-height: 1.6">
+
+<header style="border-bottom: 1px solid #222">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; min-height: 72px; flex-wrap: wrap; gap: 12px">
+<div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #F4F1EA">Sandra Folta</div>
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Black Friday</div>
+</div>
+</header>
+
+<section style="padding: 88px 0 96px">
+<div class="wrap hero">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<h1 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.08; color: #F4F1EA">Wszystko może być dużo prostsze, niż Ci się wydaje. <em style="color: #C8A456">Także wybór, od czego zacząć.</em></h1>
+<p style="margin: 0; font-size: 22px; color: #F4F1EA; max-width: 560px">Moje najlepsze programy EFT w cenach, które zdarzają się raz w roku.</p>
+<p style="margin: 0; font-size: 17px; color: #CFCBC2; max-width: 560px">Pieniądze, klientki, przyjmowanie, samodzielna praca z EFT. Wybierz temat, który teraz jest w Tobie najbardziej żywy i opukaj go. Pakiety nawet 65% taniej do 30 listopada, 23:59.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a class="btn btn-gold" href="#pakiety">Zobacz pakiety</a>
+<a class="btn btn-line" href="#produkty">Zobacz produkty</a>
+</div>
+</div>
+<img src="/blackfriday/img/photos-hero.jpg" alt="Sandra Folta" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 45%; border-radius: 20px; display: block">
+</div>
+</section>
+
+<section id="pakiety" style="padding: 96px 0; background: #111111; border-top: 1px solid #222">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Pakiety</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(34px, 4vw, 52px); line-height: 1.1; color: #F4F1EA">Pakiety Black Friday</h2>
+<p style="margin: 0; font-size: 18px; color: #CFCBC2; max-width: 640px">Jeśli czujesz, że woła Cię więcej niż jeden temat.</p>
+</div>
+
+<article style="position: relative; background: #0B0B0B; border: 1px solid #C8A456; border-radius: 28px; padding: 48px; box-sizing: border-box">
+<div class="badge" style="top: -14px; left: 48px">-46%</div>
+<div class="sgs">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Moja flagowa przestrzeń</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; color: #F4F1EA">Self-Guidance Space</h3>
+<p style="margin: 0; color: #CFCBC2; font-size: 17px">Jeśli chcesz przestać szukać odpowiedzi na zewnątrz, to jest miejsce dla Ciebie. Tu uczysz się samoprowadzenia: odróżniasz swoją prawdę od cudzych przekonań i wracasz do siebie bez czekania na sesję. Dostajesz wszystkie moje produkty i trzy rzeczy, których nie kupisz osobno.</p>
+<div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-top: 8px">
+<span style="font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; color: #C8A456; line-height: 1">3555 zł</span>
+<s style="font-size: 20px; color: #9A968E">6686 zł</s>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 6686 zł</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-self-guidance-space.html">Biorę ten pakiet</a>
+<a class="btn btn-line" href="https://platforma.sandrafolta.pl/s/bf-self-guidance-space-3-raty.html">W ratach: 3 x 1188 zł</a>
+<a class="btn btn-line" href="https://platforma.sandrafolta.pl/s/bf-self-guidance-space-5-rat.html">W ratach: 5 x 722 zł</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<img src="/blackfriday/img/covers-sgs.jpg" alt="Okładka Self-Guidance Space" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 20px; display: block">
+<div style="display: flex; flex-direction: column; gap: 16px; background: #161616; border-radius: 20px; padding: 32px; box-sizing: border-box">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #C8A456">W pakiecie</div>
+<ul class="list" style="color: #EDEBE6">
+<li>Zapukaj po więcej pieniędzy</li>
+<li>Wypukaj sobie bonusy od życia</li>
+<li>Opukaj to sama</li>
+<li>Stabilne 15K z sesji 1:1</li>
+<li>Mam klientki</li>
+<li>Rozmowy ze sobą</li>
+</ul>
+<div style="height: 1px; background: #2B2B2B"></div>
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #C8A456">Dodatkowo tylko w tym pakiecie</div>
+<ul class="list" style="color: #EDEBE6">
+<li>Oaza Spokoju <span style="color: #9A968E">o wartości 99 zł</span></li>
+<li>Integracja <span style="color: #9A968E">o wartości 888 zł</span></li>
+<li>Most do Nowej Tożsamości <span style="color: #9A968E">o wartości 444 zł</span></li>
+<li>Mapa Samoprowadzenia</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+<div class="g2">
+<article style="position: relative; background: #0B0B0B; border: 1px solid #2B2B2B; border-radius: 28px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+<div class="badge" style="top: -14px; left: 40px">-60%</div>
+<img src="/blackfriday/img/mock-m-pakiet-programow.jpg" alt="Mockup Pakiet programów" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 16px; display: block">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Twój biznes</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 32px; line-height: 1.15; color: #F4F1EA">Pakiet programów</h3>
+<p style="margin: 0; color: #CFCBC2">Dwa programy dla Ciebie, jeśli pracujesz z ludźmi i chcesz mieć pełny kalendarz. Mam Klientki otwiera drzwi nowym osobom w Twoim biznesie. Stabilne 15K z sesji 1:1 pomaga podbić ten efekt i pozwala Ci odblokować wyższe zarobki.</p>
+<ul class="list" style="color: #EDEBE6">
+<li>Stabilne 15K z sesji 1:1 <span style="color: #9A968E">(1444 zł)</span></li>
+<li>Mam klientki <span style="color: #9A968E">(799 zł)</span></li>
+</ul>
+<div style="font-size: 14px; color: #9A968E">Wartość produktów w cenie regularnej: 2243 zł<br>Wartość produktów osobno w promocji Black Friday: 1165 zł</div>
+<div style="display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-top: auto">
+<span style="font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; color: #C8A456; line-height: 1">888 zł</span>
+<s style="font-size: 18px; color: #9A968E">2243 zł</s>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 2243 zł</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-pakiet-programow.html">Biorę ten pakiet</a>
+</div>
+</article>
+
+<article style="position: relative; background: #0B0B0B; border: 1px solid #2B2B2B; border-radius: 28px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+<div class="badge" style="top: -14px; left: 40px">-65%</div>
+<img src="/blackfriday/img/mock-m-pakiet-mini.jpg" alt="Mockup Pakiet mini produktów" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 16px; display: block">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Na początek</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 32px; line-height: 1.15; color: #F4F1EA">Pakiet mini produktów</h3>
+<p style="margin: 0; color: #CFCBC2">Pieniądze, przyjmowanie i samodzielne opukiwanie. Dla Ciebie, jeśli wolisz zacząć od mniejszego kroku i sprawdzić, jak opukiwanie działa w konkretnych obszarach, które dziś są Twoimi wyzwaniami.</p>
+<ul class="list" style="color: #EDEBE6">
+<li>Zapukaj po więcej pieniędzy <span style="color: #9A968E">(149 zł)</span></li>
+<li>Wypukaj sobie bonusy od życia <span style="color: #9A968E">(333 zł)</span></li>
+<li>Opukaj to sama <span style="color: #9A968E">(249 zł)</span></li>
+</ul>
+<div style="font-size: 14px; color: #9A968E">Wartość produktów w cenie regularnej: 731 zł<br>Wartość produktów osobno w promocji Black Friday: 333 zł</div>
+<div style="display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-top: auto">
+<span style="font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; color: #C8A456; line-height: 1">255 zł</span>
+<s style="font-size: 18px; color: #9A968E">731 zł</s>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 731 zł</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-pakiet-mini-produktow.html">Biorę ten pakiet</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section style="padding: 88px 0; background: #F4F1EA; color: #0B0B0B">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Opinie</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1">Co mówią kobiety, które ze mną pracowały</h2>
+</div>
+<div class="g3">
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Dopiero Ty odkryłaś przede mną pełnię EFT. Przedstawiłaś tę metodę tak, że wiem, jak korzystać z różnych technik w każdej sytuacji. Realnie poczułam, że zmiana nie jest trudna i jest w moim zasięgu, a przede wszystkim odzyskałam moc i sprawczość.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Rozmów ze sobą</figcaption></figure>
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Kupiłam już kilkadziesiąt innych kursów, ale ten jest najlepszy. Niektórych nawet nie kończyłam, a tutaj czekam na każdy moduł jak dziecko na Boże Narodzenie. Nie za dużo teorii, a przede wszystkim praktyka.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Rozmów ze sobą</figcaption></figure>
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Ulga i odpuszczenie, że nie muszę walczyć, i mam moją tajną broń: ten program! Naprawdę widzę swoje inne podejście. Od dawna wychodzę z wielu przekonań co do biznesu i strategii, a teraz umacniam się w wielu rzeczach.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Mam klientki</figcaption></figure>
+</div>
+<p style="margin: 0; font-size: 13px; color: #5A564E">Opinie to indywidualne doświadczenia uczestniczek. Nie są gwarancją efektów.</p>
+</div>
+</section>
+
+<section id="produkty" style="padding: 96px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Mini produkty</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(34px, 4vw, 52px); line-height: 1.1; color: #F4F1EA">Mini produkty</h2>
+<p style="margin: 0; font-size: 18px; color: #CFCBC2; max-width: 640px">Jeden temat, jedna cena. Każdy za 111 zł.</p>
+</div>
+
+<article class="prod">
+<div class="stage" style="background: #141414">
+<div class="badge">-25%</div>
+<img src="/blackfriday/img/mock-zapukaj.jpg" alt="Mockup Zapukaj po więcej pieniędzy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">14-dniowe wyzwanie</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #F4F1EA">Zapukaj po więcej pieniędzy</h3>
+<p style="margin: 4px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #CFCBC2">Sprawdzasz konto i od razu ściska Cię w żołądku? Zacznijmy od tego uczucia, zamiast tworzyć kolejny Excel z budżetem.</p>
+</div>
+<div class="cols2">
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Dla Ciebie, jeśli</div><ul class="list"><li>Twoja sytuacja finansowa budzi w Tobie lęk, wstyd, frustrację albo presję</li><li>Na sam temat pieniędzy reagujesz stresem</li><li>Chcesz zarabiać więcej, ale coś w środku Cię hamuje</li></ul></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Po wyzwaniu</div><ul class="list"><li>Widzisz, jaką relację z pieniędzmi masz dziś i zmieniasz ją na bardziej pozytywną</li><li>Myślisz o pieniądzach ze spokojem i komfortem</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Co dostajesz</div><ul class="list"><li>14 dni gotowych rundek do opukania, w PDFie i w wersji audio</li></ul></div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #222">
+<div style="display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #C8A456; line-height: 1">111 zł</span><s style="color: #9A968E">149 zł</s></div>
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-zapukaj-po-wiecej-pieniedzy.html">Biorę za 111 zł</a>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 149 zł</div>
+</div>
+</article>
+
+<article class="prod">
+<div class="stage" style="background: #141414">
+<div class="badge">-66%</div>
+<img src="/blackfriday/img/mock-wypukaj.jpg" alt="Mockup Wypukaj sobie bonusy od życia" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Masterclass</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #F4F1EA">Wypukaj sobie bonusy od życia</h3>
+<p style="margin: 4px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #CFCBC2">Ile razy w tym roku coś dobrego przyszło do Ciebie samo, bez walki?</p>
+</div>
+<div class="cols2">
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Dla Ciebie, jeśli</div><ul class="list"><li>O wszystko musisz sama walczyć i zabiegać</li><li>Prezent lub komplement wywołuje w Tobie poczucie długu zamiast radości</li><li>Szanse i miłe niespodzianki trafiają do innych, nie do Ciebie</li></ul></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Po masterclassie</div><ul class="list"><li>Przyjmujesz z wdzięcznością i radością, bez zastanawiania się, co musisz dać w zamian</li><li>Uwalniasz emocje, które blokowały Cię przed byciem SZCZĘŚCIARĄ, do której przychodzą nieplanowane okazje</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Co dostajesz</div><ul class="list"><li>Nagranie video masterclassu</li></ul></div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #222">
+<div style="display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #C8A456; line-height: 1">111 zł</span><s style="color: #9A968E">333 zł</s></div>
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-wypukaj-sobie-bonusy-od-zycia.html">Biorę za 111 zł</a>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 333 zł</div>
+</div>
+</article>
+
+<article class="prod">
+<div class="stage" style="background: #141414">
+<div class="badge">-55%</div>
+<img src="/blackfriday/img/mock-opukaj.jpg" alt="Mockup Opukaj to sama" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Kurs</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #F4F1EA">Opukaj to sama</h3>
+<p style="margin: 4px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #CFCBC2">Nie musisz czekać na sesję, żeby wrócić do spokoju. Wystarczy kilkanaście minut samodzielnego opukiwania.</p>
+</div>
+<div class="cols2">
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Dla Ciebie, jeśli</div><ul class="list"><li>Chcesz korzystać z EFT inaczej niż tylko opukiwanie się z gotowymi rundkami</li><li>Szukasz sposobu na trudne emocje na co dzień</li></ul></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Po kursie</div><ul class="list"><li>Tworzysz rundki na swoje własne wyzwania</li><li>Sama wracasz do spokoju i uwalniasz podświadome blokady</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Co dostajesz</div><ul class="list"><li>8 lekcji video</li><li>Prezentacja PDF</li><li>Nagranie z warsztatu tworzenia rundek</li></ul></div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #222">
+<div style="display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #C8A456; line-height: 1">111 zł</span><s style="color: #9A968E">249 zł</s></div>
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-opukaj-to-sama.html">Biorę za 111 zł</a>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 249 zł</div>
+</div>
+</article>
+</div>
+</section>
+
+<section style="padding: 88px 0; background: #F4F1EA; color: #0B0B0B">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Opinie</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1">Po masterclassach</h2>
+</div>
+<div class="g3">
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Sandra, UWIELBIAM ten masterclass. Od wizualnej strony, przez ścieżkę procesu, po mięso, jakie przekazujesz. Totalnie TOP masterclassowy dla mnie.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Wypukaj sobie bonusy od życia</figcaption></figure>
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">To wyzwanie to jest sztos. Sandra przygotowała rundki, które dotykają wielu problemów, z jakimi borykam się w temacie pieniędzy. Nawet po tych kilku dniach mam w sobie więcej spokoju w tym obszarze.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Zapukaj po więcej pieniędzy</figcaption></figure>
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Spotkanie petarda! Dziękuję, Sandra. Wynoszę wiedzę, poczucie ulgi i chęć do pozytywnego nastawienia.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka masterclassu</figcaption></figure>
+</div>
+<p style="margin: 0; font-size: 13px; color: #5A564E">Opinie to indywidualne doświadczenia uczestniczek. Nie są gwarancją efektów.</p>
+</div>
+</section>
+
+<section style="padding: 96px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Programy</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(34px, 4vw, 52px); line-height: 1.1; color: #F4F1EA">Programy i kursy</h2>
+<p style="margin: 0; font-size: 18px; color: #CFCBC2; max-width: 640px">Dla Ciebie, jeśli wiedzy masz już sporo, a chcesz popracować z tym, co dzieje się pod spodem.</p>
+</div>
+
+<article class="prod">
+<div class="stage" style="background: #141414">
+<div class="badge">-53%</div>
+<img src="/blackfriday/img/mock-stabilne.jpg" alt="Mockup Stabilne 15K z sesji 1:1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Kurs</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #F4F1EA">Stabilne 15K z sesji 1:1</h3>
+<p style="margin: 4px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #CFCBC2">Masz wiedzę, masz klientki, a przychód skacze z miesiąca na miesiąc? Kolejny kurs marketingu tego nie załatwi.</p>
+</div>
+<div class="cols2">
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Dla Ciebie, jeśli</div><ul class="list"><li>Prowadzisz swoją działalność i pracujesz z ludźmi</li><li>Chcesz zarabiać 15 tysięcy miesięcznie z samych sesji i konsultacji 1:1</li></ul></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Po kursie</div><ul class="list"><li>Odkrywasz i uwalniasz podświadome i emocjonalne blokady, które trzymają Twój przychód poniżej 15 tysięcy</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Co dostajesz</div><ul class="list"><li>3 nagrania z warsztatów</li><li>Materiały video i PDF do samodzielnej nauki opukiwania</li><li>25 gotowych rundek EFT na biznesowe wyzwania</li><li>Prezentacja PDF</li><li>Mapa do 15K miesięcznie z EFT w PDFie</li></ul></div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #222">
+<div style="display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #C8A456; line-height: 1">666 zł</span><s style="color: #9A968E">1444 zł</s></div>
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-stabilne-15k.html">Biorę dostęp</a>
+<a class="btn btn-line" href="https://platforma.sandrafolta.pl/s/bf-stabilne-15k-raty.html">W ratach: 2 x 333 zł</a>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 1444 zł</div>
+</div>
+</article>
+
+<article class="prod">
+<div class="stage" style="background: #141414">
+<div class="badge">-37%</div>
+<img src="/blackfriday/img/mock-mam-klientki.jpg" alt="Mockup Mam klientki" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Program, 8-dniowy system</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #F4F1EA">Mam klientki</h3>
+<p style="margin: 4px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #CFCBC2">Możesz dopisać do listy kolejne zadanie. Albo wpuścić nowe klientki już teraz.</p>
+</div>
+<div class="cols2">
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Dla Ciebie, jeśli</div><ul class="list"><li>Prowadzisz biznes i chcesz mieć więcej klientek, już teraz</li><li>Nie wiesz, co zrobić, żeby się pojawiły</li><li>Wiesz, co masz robić, ale i tak tego nie robisz, bo na samą myśl czujesz przytłoczenie</li></ul></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Po programie</div><ul class="list"><li>Wyłączasz podświadome programy, które nie wpuszczają nowych klientek do Twojego biznesu</li><li>Przekładasz wewnętrzny shift w energii na konkretne ruchy i rezultaty w biznesie</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Co dostajesz</div><ul class="list"><li>2 nagrania video</li><li>12 gotowych rundek EFT</li><li>Zadania PDF do wykonania</li><li>Medytacja</li></ul></div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #222">
+<div style="display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #C8A456; line-height: 1">499 zł</span><s style="color: #9A968E">799 zł</s></div>
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-mam-klientki.html">Biorę dostęp</a>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 799 zł</div>
+</div>
+</article>
+
+<article class="prod">
+<div class="stage" style="background: #141414">
+<div class="badge">-37%</div>
+<img src="/blackfriday/img/mock-rozmowy.jpg" alt="Mockup Rozmowy ze sobą" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Kurs</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #F4F1EA">Rozmowy ze sobą</h3>
+<p style="margin: 4px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #CFCBC2">Jedno narzędzie na każdy temat, który do Ciebie wraca. Emocje, cele, relacje, tożsamość.</p>
+</div>
+<div class="cols2">
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Dla Ciebie, jeśli</div><ul class="list"><li>Chcesz samodzielnie korzystać z zaawansowanych technik EFT, żeby zmieniać podświadome przekonania i osiągać cele</li><li>Chcesz zmieniać swoją tożsamość przez pracę z energią</li><li>Szukasz jednego niezawodnego narzędzia do zmiany siebie i swojej rzeczywistości</li></ul></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Po kursie</div><ul class="list"><li>Pracujesz z każdym życiowym wyzwaniem, które blokuje Cię przed celem albo wywołuje trudne emocje</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E">Co dostajesz</div><ul class="list"><li>6 modułów: Emocje, Podstawy EFT, Self-concept, Osiąganie celów, Relacje, Manifestacja</li><li>Lekcje video, prezentacje PDF i dodatkowe materiały</li></ul></div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #222">
+<div style="display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #C8A456; line-height: 1">1999 zł</span><s style="color: #9A968E">3222 zł</s></div>
+<a class="btn btn-gold" href="https://platforma.sandrafolta.pl/s/bf-rozmowy-ze-soba.html">Biorę dostęp</a>
+<a class="btn btn-line" href="https://platforma.sandrafolta.pl/s/bf-rozmowy-ze-soba-raty.html">W ratach: 3 x 667 zł</a>
+</div>
+<div style="font-size: 12px; color: #9A968E">Najniższa cena z 30 dni przed obniżką: 3222 zł</div>
+</div>
+</article>
+</div>
+</section>
+
+<section style="padding: 88px 0; background: #F4F1EA; color: #0B0B0B">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C8A456">Opinie</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1">Po programach</h2>
+</div>
+<div class="g3">
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Opór wywalał mi mocno i nie robiłam wszystkich zadań skrupulatnie, ale od początku wdrożyłam technikę wyłączania programów i opukiwałam rundki kreacyjne. I co? Mimo że nie publikowałam prawie nic, dwie klientki zdecydowały się na miesięczną współpracę.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Mam klientki</figcaption></figure>
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">Znam EFT od 6 lat, sama wielokrotnie pracowałam tą metodą z moimi klientkami, ale to, czego u Ciebie doświadczam, pracując ze sobą, to jakiś inny wymiar. Pokazujesz mi EFT z zupełnie innej strony.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Rozmów ze sobą</figcaption></figure>
+<figure class="quote" style="margin: 0"><div style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #C8A456">"</div><blockquote style="margin: 0; font-size: 16px; color: #2A2A2A">To, co widzę od kilku dni, to totalny luz w pracy przy moim biznesie. Zniknęły resztki presji i poczucie, że muszę coś robić. Idę na totalnym flow i nie mam spiny, mimo że jestem w środku kampanii.</blockquote><figcaption style="margin-top: auto; padding-top: 16px; font-size: min(13px, 3.2vw); font-weight: 600; white-space: nowrap">Uczestniczka Mam klientki</figcaption></figure>
+</div>
+<p style="margin: 0; font-size: 13px; color: #5A564E">Opinie to indywidualne doświadczenia uczestniczek. Nie są gwarancją efektów.</p>
+</div>
+</section>
+
+<section style="padding: 96px 0">
+<div class="wrap hero">
+<img src="/blackfriday/img/photos-end.jpg" alt="Sandra Folta" style="width: 100%; max-width: 440px; justify-self: center; aspect-ratio: 2/3; object-fit: cover; object-position: 50% 30%; border-radius: 20px; display: block">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(34px, 4vw, 52px); line-height: 1.1; color: #F4F1EA">Nie wiesz, który produkt będzie najlepszy?</h2>
+<p style="margin: 0; font-size: 19px; color: #CFCBC2">Napisz do mnie, pomogę Ci wybrać.</p>
+<div><a class="btn btn-gold" href="mailto:kontakt@sandrafolta.pl">Napisz do mnie</a></div>
+<div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; color: #C8A456">Sandra</div>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #222; padding: 32px 0">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #9A968E">
+<div>© Sandra Folta</div>
+<div style="display: flex; gap: 20px; flex-wrap: wrap"><a href="https://platforma.sandrafolta.pl/next/public/pages/regulations" target="_blank" rel="noopener">Regulamin</a><a href="https://platforma.sandrafolta.pl/next/public/pages/privacy_policy" target="_blank" rel="noopener">Polityka prywatności</a></div>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>
